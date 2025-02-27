@@ -48,7 +48,8 @@ O MappingProfile.cs utiliza AutoMapper para transformar entidades em DTOs, facil
 Os serviços incluem validações e tratamento de erros, assegurando que as requisições sejam processadas corretamente e evitando falhas inesperadas.
 
 🔐 Autenticação
-A API utiliza autenticação baseada em tokens. Para acessar endpoints protegidos, inclua um token de autenticação no cabeçalho da requisição:
+A API utiliza autenticação baseada em tokens. Para acessar endpoints protegidos, inclua um token de autenticação no cabeçalho da requisição.
+
  Principais Classes e Serviços
 GravamController.cs: Controlador responsável por gerenciar as requisições relacionadas a gravames.
 RepositoryBase.cs: Implementação base para repositórios de dados.

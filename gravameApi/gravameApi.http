@@ -1,0 +1,6 @@
+@gravameApi_HostAddress = http://localhost:5056
+
+GET {{gravameApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

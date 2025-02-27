@@ -1,0 +1,14 @@
+bin/
+obj/
+*.log
+node_modules/
+# Ignorar Docker Compose
+docker-compose.yml
+docker-compose.override.yml
+
+# Ignorar configurações do VS Code
+.vscode/launch.json
+
+# Ignorar configurações sensíveis do aplicativo
+appsettings.json
+appsettings.*.json

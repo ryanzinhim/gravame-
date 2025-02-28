@@ -52,9 +52,15 @@ A API utiliza autenticação baseada em tokens. Para acessar endpoints protegido
 
  Principais Classes e Serviços
 GravamController.cs: Controlador responsável por gerenciar as requisições relacionadas a gravames.
+
 RepositoryBase.cs: Implementação base para repositórios de dados.
+
 GraphQLService.cs: Serviço de integração com GraphQL.
+
 AuthServicies.cs: Serviço de autenticação e gerenciamento de usuários.
+
 ServiceExtensions.cs: Extensões para configuração de serviços no container de injeção de dependências.
+
 ApontamentoServiceFactory.cs: Fábrica de serviços para apontamentos.
+
 MappingProfile.cs: Configuração de mapeamento de objetos utilizando AutoMapper.

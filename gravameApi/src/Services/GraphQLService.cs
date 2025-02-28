@@ -10,7 +10,7 @@ namespace gravameApi.src.Services
     {
         private readonly RestClient _client;
         private readonly string _url = "https://app.pipefy.com/graphql";
-        private readonly string _token = "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJQaXBlZnkiLCJpYXQiOjE3Mzc2NDU5NTMsImp0aSI6ImYyYjgwNTFlLTEwYWMtNDdiOC1hOWNhLTE1M2ZjNTQxMWE0ZCIsInN1YiI6MzA0MDU0MTkxLCJ1c2VyIjp7ImlkIjozMDQwNTQxOTEsImVtYWlsIjoiZGVzZW52b2x2aW1lbnRvQGxpb25zc2VtaW5vdm9zLmNvbS5iciJ9fQ.PvbvMkKPLHIgTKDqQPqTkrnpb_xiaGN02WIDVpC5_2wipIMljUksXjM30SLAbZ713U-3VoRzXv7iWTUrR3jNzA"; // Substitua pelo seu token real 
+        private readonly string _token = ""; // Substitua pelo seu token real 
         private readonly ILogger<GraphQLService> _logger;
 
         public GraphQLService(ILogger<GraphQLService> logger)

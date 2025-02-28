@@ -1,6 +1,6 @@
 # Gravame Manager
 
-![Badge](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Badge](https://img.shields.io/badge/status-em%20desenvolvimento-green)
 
 API para consulta e gerenciamento de gravames de veículos.
 
@@ -24,6 +24,16 @@ API para consulta e gerenciamento de gravames de veículos.
 - GraphQL
 - AutoMapper
 
+O fluxo da aplicação funciona assim: 
+Primeiro realizo a autenticação pra obter o token via certificado (TLS) e depois token JWT. Ja com o token, aceito a requisição.
+As informações vem padrao de um cvm chamado pipefy, por isso o esforço para tratar os dados que nao vem exatamente como a api pede (se vocês perceberem tem um middleware configurado pra ver o corpo da requisição e também bloqueia requisições duplicadas durante um periodo de tempo.).
+Faço uma verificação para confirmar que todos os campos da requisição estão devidamente preenchidos, e sigo. Em caso de negativa eu envio uma mensagem pro usuario via GraphQ atualizando o campo.
+Faço uma consulta do codigo TOM do municipio daquele cliente usando um DB que criei. Sigo e faço um tratamento das placas dos carros se ainda estiverem no padrão antigo (GravameRequestBuilder.cs onde tbm ta os tratamentos de dados).
+Faço o tratamento de erro, deserializo a resposta, pego o conteudo e retorno uma reposta tambem via GraphQL. 
+
+O Cancelamento é bem mais tranquilo, menos infos e mais direto tambem.
+
+Uso docker num primeiro momento para fazer comunicação com o banco de dados local com .NET framework, depois em prod usei o entity framework pra fazer isso, nginix pra proxy reverso e guardei em nuvem AWS
 
 ## 📦 Instalação
 
